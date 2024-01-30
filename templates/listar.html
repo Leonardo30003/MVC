@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listado de Estudiantes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            margin-left: 10px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Listado de Estudiantes</h1>
+    <a href="/agregar">Agregar Estudiante</a>
+    <ul>
+        {% for estudiante in estudiantes %}
+    <li>
+        <strong>{{ estudiante.nombre }}</strong><br>
+        Cédula: {{ estudiante.cedula }}<br>
+        Dirección: {{ estudiante.direccion }}<br>
+        Teléfono: {{ estudiante.telefono }}<br>
+        <a href="/editar/{{ estudiante.id }}">Editar</a> - 
+        <a href="/eliminar/{{ estudiante.id }}">Eliminar</a>
+    </li>
+{% endfor %}
+
+    </ul>
+</body>
+</html>

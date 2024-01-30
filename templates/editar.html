@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Estudiante</title>
+</head>
+<body>
+    <h1>Editar Estudiante</h1>
+    <form method="post">
+        Cédula: <input type="text" name="cedula" value="{{ estudiante.cedula }}"><br>
+        Nombre: <input type="text" name="nombre" value="{{ estudiante.nombre }}"><br>
+        Dirección: <input type="text" name="direccion" value="{{ estudiante.direccion }}"><br>
+        Teléfono: <input type="text" name="telefono" value="{{ estudiante.telefono }}"><br>
+        <input type="submit" value="Actualizar Estudiante">
+    </form>
+    <a href="/">Volver a la lista</a>
+</body>
+</html>
